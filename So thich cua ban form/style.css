@@ -1,0 +1,43 @@
+body {
+    background-image:url(bg.jpg);
+    background-size: cover;
+}
+.all {
+    background-color:white;
+    border: 2px solid rgba(236, 103, 51, 0.884);
+    padding: 20px;
+    position: relative;
+    width: 500px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+h2 {
+    text-align: center;
+    font-size:30px;
+    background-color:rgb(224, 85, 31);
+    color: white;
+    border-radius: 10px;
+}
+input [type=text] {
+    width: 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 20px 5px 20px;
+}
+p {
+    color: blue;
+}
+label {
+    color: #B4886B;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    }
+.cuoi {
+    line-height: 40px;
+}
+.sothich {
+    margin-bottom: 10px;
+}
