@@ -1,9 +1,8 @@
 body {
     position: relative;
     align-items: center;
-    background-color: #B1D4E0
-
-    ;
+    background-image: url(/image/bground.jpg);
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
 
