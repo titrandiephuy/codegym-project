@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To khai Y te</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="all">
+    <div>
+        <div class="pick-lang">Chọn ngôn ngữ để khai báo y tế&nbsp;/Select the language to declare health:</div>
+        <div>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="vi" checked=""><img alt="Tiếng Việt" src="image/vi-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="en"><img alt="Tiếng Anh" src="image/en-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="zh-CN"><img alt="Tiếng Trung Quốc" src="image/china-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="ko"><img alt="Tiếng Hàn Quốc" src="image/ko-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="it"><img alt="Tiếng Ý" src="image/it-big.jpg" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="kh"><img alt="Khmer" src="image/cam-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="ru"><img alt="Tiếng Nga" src="image/ru-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="es"><img alt="Tiếng Tây Ban Nha" src=" image/es-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="fr"><img alt="Tiếng Pháp" src="image/fr-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="lo"><img alt="Tiếng Lào" src="image/lo-big.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;"></label>
+        <label style="font-weight:100;width:auto;display:inline-block;"><input class="style-radio" type="radio" name="fields[lang]" value="jp"><img alt="Tiếng Nhật" src="image/jp-big_63de0.png" width="70" height="50" style="margin-top: -5px;margin-right: 5px;">
+        </label>
+        </div>
+        </div>
+    <h1>Tờ khai y tế đối với người nhập cảnh</h1>
+    <h3>Đây là tài liệu quan trọng, thông tin của anh/chị sẽ giúp cơ quan y tế liên lạc khi cần thiết phòng chống bệnh truyền bệnh</h3>
+    <form action="action-page.php" method="POST">
+        <label for="cuakhau">Cửa khẩu <em style="line-height: 1;">(*)</em>
+        </label>
+        <select name="cuakhau" id="cuakhau">
+            <option value="chon">-Chọn-</option>
+            <option value="phubai">Cảng hàng không Quốc tế Phú Bài</option>
+            <option value="noibai"> Cảng hàng không Quốc tế Nội Bài</option>
+            <option value="tansonnhat">Cảng hàn không Quốc tế Tân sơn nhất</option>
+                <option value="danang">Cảng hàng không Quốc tế Đà Nẵng</option>
+                <option value="phuquoc">Cảng hàng không Quốc tế Phú Quốc</option>
+        </select><br>
+        <label for="name">Họ và tên (ghi chữ IN HOA)
+            <em style="line-height: 1;">(*)</em>
+        </label>
+            <input type="text" name="name" required><br>
+        <label for="birthday">Năm sinh <em style="line-height: 1;">(*)</em></label>
+            <select name="birthday" id="birthday" required>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+        </select>
+        <label for="gender" name="gender">Giới tính <em style="line-height: 1;">(*)</em></label>
+            <select name="gender" id="gender" required>
+            <option value="chon">-Chọn-</option>
+            <option value="nam">Nam</option>
+            <option value="nu">Nữ</option>
+        </select>
+        <label for="nationality" name="nationality">Quốc tịch <em style="line-height: 1px;">(*)</em></label>
+            <select name="nationality" id="nationality">
+                <option value="vietnam"> Việt Nam</option>
+                <option value="USA"> USA</option>
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Laos">Laos</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Japan">Japan</option>
+            </select><br>
+        <label for="passport">Số hộ chiếu hoặc số CMND hoặc giấy thông hành hợp pháp khác <em style="line-height: 1px;">(*)</em></label>
+            <input type="text" name="passport" required><br>
+        <label for="move">Thông tin đi lại <em style="line-height:1px;">(*)</em></label>
+            <input type="radio" name="vehicle" id="plane">
+            <label for="plane">Tàu bay</label>
+            <input type="radio"name="vehicle" id="ship">
+            <label for="ship">Tàu thuyền</label>
+            <input type="radio"name="vehicle" id="car">
+            <label for="car">Ô tô</label>
+            <input type="radio"name="vehicle" id="others">
+            <label for="others">Khác (Ghi rõ)</label><br>
+        <label for="vehicle-number">Số hiệu phương tiện đi lại:</label>
+        <input type="text" name="vehicle-number" placeholder="VD: VN123">
+        <label for="seat-number">Số ghế:</label>
+        <input type="text" name="seat-number"><br>
+        <label for="date-depart">Ngày khởi hành <em style="line-height: 1px;">(*)</em></label>
+        <input type="date" name="date-depart" min="2018-12-12" max="2022-12-12">
+        <label for="date-arrive">Ngày nhập cảnh <em style="line-height: 1px;">(*)</em></label>
+        <input type="date" name="date-arrive" min="2018-12-12" max="2022-12-12"><br>
+    <h4> Đia điểm khởi hành (tỉnh/quốc gia)</h4><br>
+        <label for="depart-nation">Quốc gia/Vùng lãnh thổ <em style="line-height: 1px;">(*)</em></label>
+        <select name="nationality" id="nationality">
+            <option value="vietnam"> Việt Nam</option>
+            <option value="USA"> USA</option>
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Laos">Laos</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Japan">Japan</option>
+        </select><br>
+        <label for="province">Tỉnh <em style="line-height: 1px;">(*)</em></label>
+        <input type="text" name="province" id="province"><br>
+    <h4>Địa điểm nơi đến (tỉnh/quốc gia)</h4>
+    <label for="depart-nation">Quốc gia/Vùng lãnh thổ <em style="line-height: 1px;">(*)</em></label>
+    <select name="nationality" id="nationality">
+        <option value="vietnam"> Việt Nam</option>
+        <option value="USA"> USA</option>
+        <option value="Australia">Australia</option>
+        <option value="China">China</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Laos">Laos</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Japan">Japan</option>
+    </select><br>
+    <label for="province">Tỉnh <em style="line-height: 1px;">(*)</em></label>
+    <input type="text" name="province" id="province"><br>     
+    <label for="national">Trong vòng 14 ngày qua, Anh/Chị có đến quốc gia/vùng lãnh thổ nào? <em style="line-height: 1px;">(*)</em>    </label><br>
+    <textarea name="national" id="national" cols="70" rows="5"></textarea><br>
+    <h4>Nơi cư trú cách ly sau tập trung</h4><br>
+        <label for="province"> Tỉnh thành <em style="line-height: 1px;">(*)</em></label>
+        <select name="province" id="province">
+            <option value="">-Chọn-</option>
+            <option value="5657e3ab7f8b9a117c8b4568">Thành phố Hà Nội</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4599">Thành phố Hồ Chí Minh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a0">Tỉnh An Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4598">Tỉnh Bà Rịa - Vũng Tàu</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4596">Tỉnh Bình Dương</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4594">Tỉnh Bình Phước</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458e">Tỉnh Bình Thuận</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458a">Tỉnh Bình Định</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a5">Tỉnh Bạc Liêu</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4576">Tỉnh Bắc Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456b">Tỉnh Bắc Kạn</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4579">Tỉnh Bắc Ninh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459c">Tỉnh Bến Tre</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456a">Tỉnh Cao Bằng</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a6">Tỉnh Cà Mau</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a2">Thành phố Cần Thơ</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456e">Tỉnh Điện Biên</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4587">Thành phố Đà Nẵng</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4591">Tỉnh Đắk Lắk</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4592">Tỉnh Đắk Nông</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4597">Tỉnh Đồng Nai</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459f">Tỉnh Đồng Tháp</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4590">Tỉnh Gia Lai</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4572">Tỉnh Hoà Bình</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4569">Tỉnh Hà Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457e">Tỉnh Hà Nam</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4583">Tỉnh Hà Tĩnh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457c">Tỉnh Hưng Yên</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457a">Tỉnh Hải Dương</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457b">Thành phố Hải Phòng</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a3">Tỉnh Hậu Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458c">Tỉnh Khánh Hòa</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a1">Tỉnh Kiên Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458f">Tỉnh Kon Tum</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456f">Tỉnh Lai Châu</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459a">Tỉnh Long An</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456d">Tỉnh Lào Cai</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4593">Tỉnh Lâm Đồng</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4574">Tỉnh Lạng Sơn</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457f">Tỉnh Nam Định</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4582">Tỉnh Nghệ An</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4580">Tỉnh Ninh Bình</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458d">Tỉnh Ninh Thuận</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4577">Tỉnh Phú Thọ</option>
+             
+            <option value="5657e3ab7f8b9a117c8b458b">Tỉnh Phú Yên</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4584">Tỉnh Quảng Bình</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4588">Tỉnh Quảng Nam</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4589">Tỉnh Quảng Ngãi</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4575">Tỉnh Quảng Ninh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4585">Tỉnh Quảng Trị</option>
+             
+            <option value="5657e3ab7f8b9a117c8b45a4">Tỉnh Sóc Trăng</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4570">Tỉnh Sơn La</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4581">Tỉnh Thanh Hóa</option>
+             
+            <option value="5657e3ab7f8b9a117c8b457d">Tỉnh Thái Bình</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4573">Tỉnh Thái Nguyên</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4586">Tỉnh Thừa Thiên Huế</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459b">Tỉnh Tiền Giang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459d">Tỉnh Trà Vinh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b456c">Tỉnh Tuyên Quang</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4595">Tỉnh Tây Ninh</option>
+             
+            <option value="5657e3ab7f8b9a117c8b459e">Tỉnh Vĩnh Long</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4578">Tỉnh Vĩnh Phúc</option>
+             
+            <option value="5657e3ab7f8b9a117c8b4571">Tỉnh Yên Bái</option>
+        </select>
+    <label for="district">Quận / Huyện <em style="line-height: 1px;">(*)</em></label>
+        <select name="district" id="district">
+            <option value="1">Quận 1</option>
+            <option value="2">Quận 2</option>
+            <option value="3">Quận 3</option>
+            <option value="4">Quận 4</option>
+            <option value="5">Quận 5</option>
+            <option value="6">Quận 6</option>
+            <option value="7">Quận 7</option>
+            <option value="8">Quận 8</option>
+            <option value="9">Quận 10</option>
+            <option value="10">Quận Bình Thạnh</option>
+        </select>
+    <label for="ward">Phường/ xã <em style="line-height: 1px;">(*)</em>
+    </label>
+        <select name="ward" id="ward">
+            <option value="1">Phường 1</option>
+            <option value="2">Phường 2</option>
+            <option value="3">Phường 3</option>
+            <option value="4">Phường 4</option>
+            <option value="5">Phường 5</option>
+            <option value="6">Phường 6</option>
+            <option value="7">Phường 7</option>
+            <option value="8">Phường 8</option>
+            <option value="9">Phường 9</option>
+            <option value="10">Phường 10</option>
+        </select><br>
+    <label for="address-after-quarantine">Địa chỉ cư trú sau cách ly <em style="line-height: 1px;;">(*)</em></h4>
+    <input type="text" name="address-after-quarantine" id="address-after-quarantine"><br>
+    <h4>Địa chỉ liên lạc tại Việt Nam</h4>
+    <select name="province" id="province">
+        <option value="">-Chọn-</option>
+        <option value="5657e3ab7f8b9a117c8b4568">Thành phố Hà Nội</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4599">Thành phố Hồ Chí Minh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a0">Tỉnh An Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4598">Tỉnh Bà Rịa - Vũng Tàu</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4596">Tỉnh Bình Dương</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4594">Tỉnh Bình Phước</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458e">Tỉnh Bình Thuận</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458a">Tỉnh Bình Định</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a5">Tỉnh Bạc Liêu</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4576">Tỉnh Bắc Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456b">Tỉnh Bắc Kạn</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4579">Tỉnh Bắc Ninh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459c">Tỉnh Bến Tre</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456a">Tỉnh Cao Bằng</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a6">Tỉnh Cà Mau</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a2">Thành phố Cần Thơ</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456e">Tỉnh Điện Biên</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4587">Thành phố Đà Nẵng</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4591">Tỉnh Đắk Lắk</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4592">Tỉnh Đắk Nông</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4597">Tỉnh Đồng Nai</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459f">Tỉnh Đồng Tháp</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4590">Tỉnh Gia Lai</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4572">Tỉnh Hoà Bình</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4569">Tỉnh Hà Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457e">Tỉnh Hà Nam</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4583">Tỉnh Hà Tĩnh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457c">Tỉnh Hưng Yên</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457a">Tỉnh Hải Dương</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457b">Thành phố Hải Phòng</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a3">Tỉnh Hậu Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458c">Tỉnh Khánh Hòa</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a1">Tỉnh Kiên Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458f">Tỉnh Kon Tum</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456f">Tỉnh Lai Châu</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459a">Tỉnh Long An</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456d">Tỉnh Lào Cai</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4593">Tỉnh Lâm Đồng</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4574">Tỉnh Lạng Sơn</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457f">Tỉnh Nam Định</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4582">Tỉnh Nghệ An</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4580">Tỉnh Ninh Bình</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458d">Tỉnh Ninh Thuận</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4577">Tỉnh Phú Thọ</option>
+         
+        <option value="5657e3ab7f8b9a117c8b458b">Tỉnh Phú Yên</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4584">Tỉnh Quảng Bình</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4588">Tỉnh Quảng Nam</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4589">Tỉnh Quảng Ngãi</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4575">Tỉnh Quảng Ninh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4585">Tỉnh Quảng Trị</option>
+         
+        <option value="5657e3ab7f8b9a117c8b45a4">Tỉnh Sóc Trăng</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4570">Tỉnh Sơn La</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4581">Tỉnh Thanh Hóa</option>
+         
+        <option value="5657e3ab7f8b9a117c8b457d">Tỉnh Thái Bình</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4573">Tỉnh Thái Nguyên</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4586">Tỉnh Thừa Thiên Huế</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459b">Tỉnh Tiền Giang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459d">Tỉnh Trà Vinh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b456c">Tỉnh Tuyên Quang</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4595">Tỉnh Tây Ninh</option>
+         
+        <option value="5657e3ab7f8b9a117c8b459e">Tỉnh Vĩnh Long</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4578">Tỉnh Vĩnh Phúc</option>
+         
+        <option value="5657e3ab7f8b9a117c8b4571">Tỉnh Yên Bái</option>
+    </select>
+    <label for="district">Quận / Huyện <em style="line-height: 1px;">(*)</em></label>
+        <select name="district" id="district">
+            <option value="1">Quận 1</option>
+            <option value="2">Quận 2</option>
+            <option value="3">Quận 3</option>
+            <option value="4">Quận 4</option>
+            <option value="5">Quận 5</option>
+            <option value="6">Quận 6</option>
+            <option value="7">Quận 7</option>
+            <option value="8">Quận 8</option>
+            <option value="9">Quận 10</option>
+            <option value="10">Quận Bình Thạnh</option>
+        </select>
+    <label for="ward">Phường/ xã <em style="line-height: 1px;">(*)</em>
+    </label>
+        <select name="ward" id="ward">
+            <option value="1">Phường 1</option>
+            <option value="2">Phường 2</option>
+            <option value="3">Phường 3</option>
+            <option value="4">Phường 4</option>
+            <option value="5">Phường 5</option>
+            <option value="6">Phường 6</option>
+            <option value="7">Phường 7</option>
+            <option value="8">Phường 8</option>
+            <option value="9">Phường 9</option>
+            <option value="10">Phường 10</option>
+        </select><br>
+        <label for="address-after-quarantine">Địa chỉ nơi ở tại Việt Nam <em style="line-height: 1px;;">(*)</em></h4>
+            <input type="text" name="address-after-quarantine" id="address-after-quarantine"><br>
+        <p style="font-size: 12px;">
+        <i>Số điện thoại bạn sẽ sử dụng tại Việt Nam (Là số Roaming hoặc số Việt Nam)
+        </i>
+        </p>
+    <label for="tel">Điện thoại <em style="line-height:1px">(*)</em></label>
+    <input type="tel" name="tel" id="tel">
+    <label for="email">Email</label>
+    <input type="mail" name="email" id="email">
+<h4>Trong vòng 14 ngày (tính đến thời điểm làm thủ tục xuất cảnh, nhập cảnh, quá cảnh) Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây không? <em style="line-height: 1px;"></em></h4>
+<div class="tableChoiceData mb-20">
+    <div class="cols-left">
+    <table class="table table-bordered ">
+     <thead>
+        <tr>
+            <th scope="col">Triệu chứng</th>
+            <th scope="col" style="width:70px;" class="text-center">Có</th>
+            <th scope="col" style="width:70px;" class="text-center">Không</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sốt <span class="text-required">(*)</span></td>
+            <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+            <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="2"></td>
+        </tr>
+        <tr>
+            <td>Ho <span class="text-required">(*)</span></td>
+        <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+        <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" value="2"></td>
+    </tr>
+    <tr>
+        <td>Khó thở <span class="text-required">(*)</span></td>
+        <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+        <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="2"></td>
+    </tr>
+    <tr>
+    <td>Đau họng <span class="text-required">(*)</span></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="2"></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <div class="cols-right">
+    <table class="table table-bordered ">
+    <thead>
+    <tr>
+    <th scope="col">Triệu chứng</th>
+    <th scope="col" style="width:70px;" class="text-center">Có</th>
+    <th scope="col" style="width:70px;" class="text-center">Không</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Nôn/buồn nôn <span class="text-required">(*)</span></td>
+    <td style="width:70px;" class="text-center"><input type="Radio" class="style-radio" value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+    <td style="width:70px;" class="text-center"><input type="Radio" class="style-radio"  value="2"></td>
+    </tr>
+    <tr>
+    <td>Tiêu chảy <span class="text-required">(*)</span></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" n value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="2"></td>
+    </tr>
+    <tr>
+    <td>Xuất huyết ngoài da <span class="text-required">(*)</span></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio"  value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" n value="2"></td>
+    </tr>
+    <tr>
+    <td>Nổi ban ngoài da <span class="text-required">(*)</span></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" value="1" data-msg-required="Bạn chưa chọn triệu chứng"></td>
+    <td class="text-center" style="width:70px"><input type="Radio" class="style-radio" value="2"></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    <div class="row ">
+    <div class="col-md-12   col-xs-12 "><br>
+        <label for="vaccine">Danh sách vaccine hoặc sinh phẩm đã được sử dụng</label><br>
+        <input type="text" name="vaccine" id="vaccine">
+    <h4>Lịch sử phơi nhiễm: Trong vòng 14 ngày qua, anh chị có <span class="text-required">(*)</span></h4>
+    <table>
+        <thead>
+            <th></th>
+            <th>Có</th>
+            <th>Không</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Đến trang trại chăn nuôi / chợ buôn bán động vật sống / cơ sở giết mổ động vật / tiếp xúc động vật <span class="text-required">(*)</span></td>
+                <td>
+                    <input type="radio" name="animal" id="1">
+                </td>
+                <td>
+                    <input type="radio" name="animal" id="2">
+                </td>
+            </tr>
+            <tr>
+                <td> Tiếp xúc gần (< 2m) với người mắc bệnh viêm đường hô hấp do nCoV<span class="text-required">(*)</span>
+                </td>
+                <td>
+                    <input type="radio" name="tiepxuc" id="1">
+                </td>
+                <td>
+                    <input type="radio" name="tiepxuc" id="2">
+                </td>
+            </tr>
+        </tbody>
+    </table><br>
+<h4>Chọn cơ sở cách ly <span class="text-required">(*)</span></h4><br>
+    <input type="radio" name="cscl" id="2">
+    <label for="1">Cơ sở cách ly tập trung</label><br>
+    <input type="radio" name="cscl" id="2">
+    <label for="2">Cơ sở cách ly tự chọn</label><br>
+    <input type="radio" name="cscl" id="3">
+    <label for="3">Khác</label><br>
+<h4>Phiếu kết quả xét nghiệm</h4><br>
+    <div>
+        <span>Chọn file</span>
+        <label class="custom-file-upload"><input type="file" name="file" accept=".jpg,.gif,.png,.jpeg,.bmp,.webp,.heic,.ico,.xls,.doc,.rar,.zip,.7zip,.ppt,.xlsx,.docx,.pptx,.pdf,.txt,.html,.htm" ></label></div>
+    </form>
+    <input type="text" placeholder="Ngày xét nghiệm"><br>
+    <label><input type="checkbox">Xác nhận âm tính </label>
+<div>
+    Dữ liệu bạn cung cấp hoàn toàn bảo mật và chỉ phục vụ cho việc phòng chống dịch, thuộc quản lý của Ban chỉ đạo quốc gia về Phòng chống dịch Covid-19. Khi bạn nhấn nút "Gửi" là bạn đã hiểu và đồng ý.
+</div><br>
+<label>Mã bảo mật <em style="line-height: 1px;">(*)</em></label>
+<input type="text" placeholder="Nhập mã bảo mật tại đây"><br>
+<input type="button" id="gui-tk" value="GỬI TỜ KHAI">
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Convert</title>
+    <style>
+
+    </style>
+</head>
+<body>
+        <p id="output" ></p>
+        <div><label for="">Amount</label><br>
+        <input type="text" name="amount-money" id="amount-money"></div>
+        <div>
+        <label for="">From Currency</label><br>
+        <select name="currency1" id="currency1">
+            <option id="vnd" value="vnd">VND</option>
+            <option id="usd" value="usd">USD</option>
+            <option id="euro" value="euro">EURO</option>
+        </select>
+        </div>
+        <div>
+        <label for="">To Currency</label><br>
+        <select name="currency2" id="currency2">
+            <option id="usd" value="usd">USD</option>
+            <option id="euro" value="euro">EUR</option>
+            <option id="vnd" value="vnd">VND</option>
+        </select>
+        </div><br>
+        <button onclick="currencyConvert()">Convert</button>
+    
+    <script>
+        
+       function currencyConvert(){ 
+        let amount = parseInt(document.getElementById("amount-money").value);
+        let fromCurrency = document.getElementById("currency1").value;
+        let toCurrency = document.getElementById("currency2").value;
+           if (fromCurrency =='vnd' && toCurrency =='usd'){
+                let result = (amount/23000);
+                document.getElementById("output").innerHTML = "Result: " + result + " USD";
+            }
+            if (fromCurrency =='usd' && toCurrency =='vnd'){
+                let result = (amount*23000);
+                document.getElementById("output").innerHTML = result;
+            }
+            if (fromCurrency =='vnd' && toCurrency =='euro'){
+                let result = (amount/27000);
+                document.getElementById("output").innerHTML = result;
+            }
+            if (fromCurrency =='euro' && toCurrency =='vnd'){
+                let result = (amount*27000);
+                document.getElementById("output").innerHTML = result;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
