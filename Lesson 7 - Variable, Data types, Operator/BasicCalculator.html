@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input id="left" type="text">
+    <input id="right" type="text"><br>
+    <button onclick="add()">Addition(+)</button>
+    <button onclick="sub()">Subtraction(-)</button>
+    <button onclick="mult()"> Multiplication(X)</button>
+    <button onclick="div()">Division(/)</button>
+    <p id="result"></p>
+    <script>
+        function add() {
+        let a = document.getElementById("left").value;
+        let b = document.getElementById("right").value;
+        let c = parseInt(a) + parseInt(b);
+        document.getElementById("result").innerText = ("Result Addition: " + c);
+        }
+        function sub() {
+        let a = document.getElementById("left").value;
+        let b = document.getElementById("right").value;
+        let c = parseInt(a) - parseInt(b);
+        document.getElementById("result").innerText = ("Result Subtraction: " + c);
+        }
+        function mult() {
+        let a = document.getElementById("left").value;
+        let b = document.getElementById("right").value;
+        let c = parseInt(a) * parseInt(b);
+        document.getElementById("result").innerText = ("Result Multiplication: " + c);
+        }
+        function div() {
+        let a = document.getElementById("left").value;
+        let b = document.getElementById("right").value;
+        let c = parseInt(a) / parseInt(b);
+        document.getElementById("result").innerText = ("Result Division: " + c);
+        }
+    </script>
+</body>
+</html>
