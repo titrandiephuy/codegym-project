@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <script>
+        let AverageScore = parseInt(prompt("Enter your average score: " ));
+        if ( 10 > AverageScore >= 9)
+            alert("Hoc sinh Xuat Sac");
+        if ( 8 <= AverageScore < 9)
+            alert("Hoc sinh Gioi");
+        if (7 <= AverageScore < 8)
+            alert("Hoc sinh Kha");
+        if (5 <= AverageScore < 7)
+            alert("Hoc sinh TB");
+        if ( AverageScore < 5)
+            alert("Hoc sinh Yeu");
+            // Làm ngược lại sẽ đỡ các bước so sánh.
+            // Để ý các trường hợp lớp hơn 10 và bé hơn 0
+            // Không được làm biểu thức 9=< average score <=10 mà phải tách ra là average score <= 9 && average score <= 10
+    </script>
+</body>
+</html>

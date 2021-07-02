@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You must love me</title>
+    <style>
+        h1 {
+            position: absolute;
+            left: 300px;
+            top: 100px;
+        }
+        #btnYes {
+            position: absolute;
+            left: 330px;
+            top: 180px;
+            padding: 7px;
+            width: 60px;
+        }
+        #btnNo {
+            position: absolute;
+            left: 440px;
+            top: 180px;
+            padding: 7px;
+            width: 60px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me ?</h1>
+    <input type="button" value="Yes" id="btnYes" onclick="clickYes()"/>
+    <input type="button" value="No" id="btnNo" onmouseover="clickNo()"/>
+    <script>
+        function clickYes() {
+            alert("Yesss, I love you too babe ");
+        }
+        function clickNo() {
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById("btnNo").style.left = x + "px";
+            document.getElementById("btnNo").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
