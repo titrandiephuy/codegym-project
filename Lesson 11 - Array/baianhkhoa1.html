@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [2, 3, 8, 9, 34, -2, 5];
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i] + "; ");
+        // }
+
+        // //Random
+        // let arr = [];
+        // let size = +prompt("Enter the array size number: ");
+        // for (let i = 0; i < size; i++) {
+        //     arr[i] = Math.floor(Math.random()*10) + 1;
+        // }
+        // for (let i = 0; i < arr.length; i++) {
+        // document.write(arr[i] + "; ");
+        // }
+
+        let arr = [];
+        let size = 20;
+        for (let i = 0; i < size; i++) {
+            arr[i] = Math.floor(Math.random() * 51);
+        }
+        let found = false;
+        let index = -1;
+        let dem =[];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == 40) {
+                found = true;
+                index = i
+                dem += i + ",";
+
+            }
+        }
+        document.write(arr)
+        if (found) {
+            document.write("Trong mảng tồn tại số 40 tại arr["+ dem + "]")
+        } else {
+            document.write("Trong mảng không tồn tại số 40")
+        }
+        // hien thi tat ca nhung so 40 va vi tri cua no
+        //khong can bien found van co the lam cuoc, index nếu bằng không thì hàm đó false còn có thì true và in ra
+    </script>
+</body>
+
+</html>

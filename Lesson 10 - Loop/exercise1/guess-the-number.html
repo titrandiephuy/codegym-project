@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <input style="margin:50%; padding: 20px; background-color: bisque; border-radius: 20%;" id="play" type="button" value="Play" onclick="playGame()">
+    <script>
+        function playGame() {
+            let terms = parseInt(prompt("Enter terms: "));
+            let random = Math.floor(Math.random() * terms) + 1;
+            console.log(random)
+            for (let i = 0; i < 4; i++) {
+                let guess = parseInt(prompt("Enter your guess number: "));
+                if (guess == random) {
+                    alert("Congrats! You're right!!");
+                    break;
+                } else if (guess > random) {
+                    alert("Your guess is larger than our number. Try again");
+                } else if (guess < random) {
+                    alert("Your guess is smaller than our number. Try again!")
+                } else { alert("You're lose!!!!"); }
+            i++;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>So nguyen to</title>
+</head>
+
+<body>
+  <h3>Prime Number </h3>
+  <input id="number" type="text" placeholder="Enter a number" />
+  <input type="button" value="Show Prime Number" onclick="primeNum()" /><br>
+  <p>Result</p>
+  <input type="text" id="result" />
+  <script>
+    let n = parseInt(document.getElementById("number").value);
+      function primeNum(num) {
+        if (num < 2) return false;
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+    for (let count = 0; count < n; count++) {
+      if(primeNum(i)) {
+        document.getElementById("result").value = `Số ${n} là số nguyên tố`;
+        count++
+      }
+    i++
+    }
+
+  </script>
+</body>
+
+</html>

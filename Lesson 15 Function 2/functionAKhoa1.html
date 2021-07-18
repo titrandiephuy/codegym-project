@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+
+        let array = matrix(5,10,90);
+        document.write("<br>");
+        sumMatrix(array);
+        document.write("<br>");
+        cheoChinh(array);
+        document.write("<br>");
+        cheoPhu(array);
+        document.write("<br>");
+        sumDuongBien(array);
+        document.write("<br>");
+        underTriangle(array);
+        document.write("<br>");
+        upperTriangle(array);
+        function matrix(n, min, max) {
+            let arr = []
+            for (let i = 0; i < n; i++) {
+                let arr2 = [];
+                for (let j = 0; j < n; j++) {
+                    arr2.push(Math.floor(Math.random() * max-min+1) + min);
+                }
+                arr[i] = arr2;
+                document.write(arr[i] + "<br>");
+            }
+            return arr;
+        }
+
+        function sumMatrix(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < i; j++) {
+                    if (arr[i][j] % 2 == 0) {
+                        sum += arr[i][j];
+                    }
+                }
+            }
+            document.write(`Tổng số chẵn của ma trận là: ${sum}`);
+            return sum;
+        }
+
+        function cheoChinh(arr) {
+            let sum = 0;
+            // for (let i = 0; i < arr.length; i++) {
+            //     for (let j = 0; j < arr.length; j++) {
+            //         if (i == j) {
+            //             sum += arr[i][j];
+            //         }
+            //     }
+            // }
+            // Cách này phức tạp quá
+            for (let i = 0; i < arr.length; i++) {
+            sum += arr[i][i]
+            }
+            document.write(`Tổng của đường chéo chính là: ${sum}`);
+            return sum;
+        }
+
+        function cheoPhu(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i][arr.length - i - 1];
+            }
+            document.write(`Tổng của đường chéo phụ là: ${sum}`);
+            return sum;
+        }
+
+        function displayMatrix(arr) {
+            arr.forEach(myFunction);
+            document.getElementById("demo").innerHTML = text;
+            function myFunction(item, index) {
+                text += index + ": " + item + "<br>";
+            }
+        }
+
+        function sumDuongBien(arr) {
+            let s = 0;
+            let n = arr.length;
+            for (let i = 0; i < n; i++) {
+                s += arr[i][0] + arr[i][n - 1];
+            }
+            for (let j = 1; j < n - 1; j++) {
+                s += arr[0][j] + arr[n - 1][j]
+            }
+            document.write(`Tổng của các đường biên là: ${s}`);
+            return s;
+        }
+
+        function underTriangle(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j <= i; j++) {
+                    document.write(`${arr[i][j]} &nbsp;&nbsp;`);
+                }
+                document.write("<br>")
+            }
+        }
+
+        function upperTriangle(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - i; j++) {
+                    document.write(`${arr[i][j]} &nbsp;&nbsp;`);
+                }
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+
+</html>

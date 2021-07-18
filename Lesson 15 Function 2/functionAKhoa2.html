@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr3 = [];
+        let n = +prompt("Enter size of array: ");
+        let arr1 = matrix(n);
+        document.write("<br>");
+        let arr2 = matrix(n);
+        document.write("<br>");
+        document.write("Tổng ma trận của hai mảng là:<br> ");
+        sumTwoMatrix(arr1, arr2, n);
+        document.write("<br>");
+        document.write("Tích ma trận của hai mảng là: <br>");
+        productTwoMatrix(arr1, arr2, n);
+        
+        function matrix(n) {
+            let arr = []
+            for (let i = 0; i < n; i++) {
+                let arr2 = [];
+                for (let j = 0; j < n; j++) {
+                    arr2.push(Math.floor(Math.random() * 31) + 10);
+                }
+                arr[i] = arr2;
+                document.write(arr[i] + "<br>");
+            }
+            return arr;
+        }
+        //Tính tổng ma trận của hai mảng
+        function sumTwoMatrix(arr1, arr2, n) {
+            let i, j;
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < n; j++) {
+                    arr1[i][j] = arr1[i][j] + arr2[i][j];
+                }
+                document.write(`${arr1[i]} <br>`)
+            }
+            return arr1;
+        }
+        //Tính tích ma trận của hai mảng
+        function productTwoMatrix(arr1, arr2, n) {
+            let i, j;
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < n; j++) {
+                    arr1[i][j] = arr1[i][j] * arr2[i][j];
+                }
+                document.write(`${arr1[i]} <br>`)
+            }
+            return arr1;
+        }
+
+    </script>
+</body>
+
+</html>

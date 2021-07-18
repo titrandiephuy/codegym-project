@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = []
+        let length = +prompt("Enter length of array")
+        for (let i = 0; i < length; i++) {
+            array.push(+prompt("Enter an array of number: "));
+            console.log(array)
+        }
+        document.write("Before reverse: " + array + "<br>");
+        document.write("After reverse: " + reverseNum(array));
+        function reverseNum(arr) {
+            return result = arr.reverse();
+        }
+    </script>
+</body>
+
+</html>

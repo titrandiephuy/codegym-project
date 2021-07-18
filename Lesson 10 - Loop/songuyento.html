@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>So nguyen to</title>
+  </head>
+  <body>
+    <script>
+      //   let numbers = +prompt("Nhập vào số lượng số nguyên tố  cần in ra: ");
+      //   let count = 0;
+      //   let i = 1;
+
+      // while (count < numbers) {
+      //   if (primeNum(i)) {
+      //       document.write(i + "<br>");
+      //       count++;
+      //   }
+      //   i++;
+      // }
+      //   while  (numbers <=0) {
+      //     n = +prompt("Nhập numbers > 0 : ");
+      //     if (numbers > 0) {
+      //     }
+      //     break;}
+        // function primeNum(num) {
+        //     if (num <2) return false;
+        //     for(let i = 2; i < num; i++) {
+        //         if(num % i == 0) {
+        //             return false;
+        //         }
+
+        //     } return true;
+        // }
+
+      //     // let count = 0;
+      //     // let i = 1;
+      //     // while (count < 20){
+      //     //     if (isPrime(i)){
+      //     //         document.write(i + "<br>");
+      //     //         count++;
+      //     //     }
+      //     //     i++;
+      //     // }
+      //     // function isPrime(number){
+      //     //     if (number <2) return false;
+      //     //     for (let i = 2; i < number; i++){
+      //     //         if (number % i == 0) return false;
+      //     //     }
+      //     //     return true;
+      //     // }
+      let numbers = +prompt("Enter a number: ");
+      let count = 0;
+      let i = 1;
+      function primeNum(num) {
+        if (num < 2) return false;
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      while (count < numbers) {
+        if (primeNum(i)) {
+          document.write(i + "<br>");
+          count++;
+        }
+        i++;
+      }
+    </script>
+  </body>
+</html>

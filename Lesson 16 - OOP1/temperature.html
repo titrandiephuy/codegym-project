@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(celsius){
+                this.celsius = celsius;
+            }
+            setCelsius(){
+                this.celsius = celsius;
+            }
+            getCelsius(){
+                return this.celsius
+            }
+            getCtoF(){
+                return this.celsius * 1.8 + 23;
+            }
+            getCtoK(){
+                return this.celsius + 273.15;
+            }
+            toString(){
+                return `F is ${this.getCtoF()}, K is ${this.getCtoK()}`;
+            }
+        }
+        let temp = new Temperature(30);
+        alert(temp.toString());
+    </script>
+</body>
+</html>

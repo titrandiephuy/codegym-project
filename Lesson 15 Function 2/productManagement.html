@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(199, 199, 199)
+        }
+
+        td {
+            padding: 10px;
+            align-items: center;
+            text-align: center;
+        }
+
+        input[type=button] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius:8px;
+        }
+    </style>
+</head>
+
+<body onload="displayProductName(productName)">
+    <h2>Add New Product</h2><br>
+    <input type="text" placeholder="New Product" id="newproduct">
+    <input type="button" value="Add" onclick="addProduct()"><br>
+    <h2>Display All Product</h2><br>
+    <hr>
+    <h3>Product Name</h3>
+    <!-- Count products in array -->
+    <div></div>
+    <table id="productArea">
+    </table>
+    <script>
+        let productName = ["Iphone", "Sony Xperia", "Samsung Galaxy Note", "Xiaomi"];
+        function displayProductName(arr) {
+            let table = "";
+            for (let i = 0; i < arr.length; i++) {
+                table += "<tr>"
+                table += `<td>${i + 1}</td>`
+                table += `<td>${arr[i]}</td>`
+                table += `<td><input type="button" value="Edit" onclick="editProduct(${i})"></td>`
+                table += `<td><input type="button" value="Delete" onclick="deleteProduct(${i})"></td>`
+                table += "</tr>"
+            }
+            document.getElementById("productArea").innerHTML = table;
+        }
+
+        function addProduct(product) {
+            productName.push(document.getElementById('newproduct').value);
+            displayProductName(productName);
+        }
+
+        function deleteProduct(i) {
+            productName.splice(i, 1);
+            displayProductName(productName);
+        }
+
+        function editProduct(i) {
+            let newProduct = prompt("Edit product: ");
+            productName[i] = newProduct;
+            displayProductName(productName);
+
+        }
+    </script>
+</body>
+
+</html>
